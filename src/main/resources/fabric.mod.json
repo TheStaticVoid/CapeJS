@@ -15,7 +15,7 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "dev.thestaticvoid.capejs.client.CapeJS"
+      "dev.thestaticvoid.capejs.CapeJS"
     ]
   },
   "mixins": [
