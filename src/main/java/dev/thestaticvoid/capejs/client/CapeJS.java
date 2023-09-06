@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.UUID;
-import java.util.function.BiConsumer;
 
 public class CapeJS implements ClientModInitializer {
     public static final String MOD_ID = "capejs";
