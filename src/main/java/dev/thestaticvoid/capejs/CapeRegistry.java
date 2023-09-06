@@ -1,6 +1,5 @@
 package dev.thestaticvoid.capejs;
 
-import dev.thestaticvoid.capejs.CapeJS;
 import dev.thestaticvoid.capejs.kubejs.AddCapeEventJS;
 import dev.thestaticvoid.capejs.kubejs.CapeJSEvents;
 import net.minecraft.client.player.AbstractClientPlayer;
