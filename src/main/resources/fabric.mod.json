@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "capejs",
+  "version": "${version}",
+  "name": "CapeJS",
+  "description": "Allows you to give users custom capes through KubeJS",
+  "authors": [
+    "static"
+  ],
+  "contact": {
+    "repo": "https://github.com/TheStaticVoid/CapeJS"
+  },
+  "license": "MIT",
+  "icon": "assets/capejs/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.thestaticvoid.capejs.client.CapeJS"
+    ]
+  },
+  "mixins": [
+    "capejs.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": ">=0.76.1",
+    "minecraft": "${minecraft_version}"
+  }
+}
