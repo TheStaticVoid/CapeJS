@@ -10,7 +10,6 @@
   },
   "client": [
     "CapeLayerMixin",
-    "ElytraLayerMixin",
-    "PlayerRendererMixin"
+    "ElytraLayerMixin"
   ]
 }
