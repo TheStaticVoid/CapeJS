@@ -8,11 +8,14 @@
     "static"
   ],
   "contact": {
-    "repo": "https://github.com/TheStaticVoid/CapeJS"
+    "homepage": "https://github.com/TheStaticVoid/CapeJS",
+    "sources": "https://github.com/TheStaticVoid/CapeJS",
+    "issues": "https://github.com/TheStaticVoid/CapeJS/issues"
   },
   "license": "MIT",
   "icon": "assets/capejs/icon.png",
   "environment": "client",
+  "accessWidener": "capejs.accesswidener",
   "entrypoints": {
     "client": [
       "dev.thestaticvoid.capejs.CapeJS"
@@ -24,6 +27,7 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": ">=0.76.1",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "kubejs": ">=1902.6.1-build.300"
   }
 }

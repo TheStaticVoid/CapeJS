@@ -10,7 +10,7 @@ public class CapeJS implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        CapeRegistry.initialize();
         LOGGER.info("Initializing mod: " + MOD_ID);
+        CapeRegistry.initialize();
     }
 }

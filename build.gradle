@@ -45,7 +45,7 @@ dependencies {
         parchment("org.parchmentmc.data:parchment-1.19.2:2022.11.27@zip")
     }
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    modRuntimeOnly "dev.architectury:architectury-fabric:6.2.43"
+    modRuntimeOnly "dev.architectury:architectury-fabric:${project.architectury_version}"
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
@@ -97,6 +97,10 @@ jar {
     from("LICENSE") {
         rename { "${it}_${project.archivesBaseName}"}
     }
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/capejs.accesswidener")
 }
 
 // configure the maven publication

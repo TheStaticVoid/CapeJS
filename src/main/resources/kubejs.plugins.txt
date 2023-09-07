@@ -1,0 +1,1 @@
+dev.thestaticvoid.capejs.kubejs.CapeJSPlugin

@@ -24,7 +24,7 @@ public abstract class CapeLayerMixin extends RenderLayer<AbstractClientPlayer, P
 
     @Inject(method = "render(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/player/AbstractClientPlayer;FFFFFF)V",
             at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/AbstractClientPlayer;getCloakTextureLocation()Lnet/minecraft/resources/ResourceLocation;", ordinal = 0),
-            cancellable = true, remap = false)
+            cancellable = true)
     private void renderCancelMixin(PoseStack matrixStack, MultiBufferSource buffer, int packedLight, AbstractClientPlayer livingEntity,
                                    float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw,
                                    float headPitch, CallbackInfo ci) {
@@ -36,7 +36,7 @@ public abstract class CapeLayerMixin extends RenderLayer<AbstractClientPlayer, P
 
     @Inject(method = "render(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/player/AbstractClientPlayer;FFFFFF)V",
             at = @At(value = "INVOKE", target = "Lnet/minecraft/client/model/PlayerModel;renderCloak(Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;II)V",
-            shift = At.Shift.BEFORE), cancellable = true, remap = false)
+            shift = At.Shift.BEFORE), cancellable = true)
     private void renderMixin(PoseStack matrixStack, MultiBufferSource buffer, int packedLight, AbstractClientPlayer livingEntity,
                              float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw,
                              float headPitch, CallbackInfo ci) {
