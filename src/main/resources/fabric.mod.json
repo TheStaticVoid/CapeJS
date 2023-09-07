@@ -15,7 +15,6 @@
   "license": "MIT",
   "icon": "assets/capejs/icon.png",
   "environment": "client",
-  "accessWidener": "capejs.accesswidener",
   "entrypoints": {
     "client": [
       "dev.thestaticvoid.capejs.CapeJS"

@@ -1,0 +1,13 @@
+Cape template description
+Black - cape top
+White - cape bottom
+Red - cape left side
+Blue - Cape rightside
+Green - cape outer
+Yellow - cape inner (towards player)
+
+Elytra template description
+Dark Green - elytra outer
+Pink - elytra bottom
+Dark Blue - elytra inner
+Brown - elytra top
