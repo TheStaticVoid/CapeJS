@@ -35,7 +35,9 @@ public class CapeRegistry {
 
     public static void addToCapeMap(String uuid, ResourceLocation identifier) {
         CapeJS.LOGGER.info("Adding custom cape for: " + uuid + ", at: " + identifier);
-        CUSTOM_CAPE_MAP.put(UUID.fromString(uuid), identifier);
+        if (!CUSTOM_CAPE_MAP.containsKey(UUID.fromString(uuid))) {
+            CUSTOM_CAPE_MAP.put(UUID.fromString(uuid), identifier);
+        }
     }
 
     public static boolean mapContainsPlayer(AbstractClientPlayer player) {

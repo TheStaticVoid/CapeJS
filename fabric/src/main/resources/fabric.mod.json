@@ -4,14 +4,20 @@
   "version": "${version}",
 
   "name": "CapeJS",
-  "description": "",
-  "authors": [],
-  "contact": {},
+  "description": "Mod utilizing KubeJS to add custom capes to players using scripts",
+  "authors": [
+    "static"
+  ],
+  "contact": {
+    "homepage": "http://github.com/TheStaticVoid/CapeJS",
+    "issues": "http://github.com/TheStaticVoid/CapeJS/issues",
+    "repo": "https://github.com/TheStaticVoid/CapeJS"
+  },
 
   "license": "MIT",
-  "icon": "icon.png",
+  "icon": "assets/capejs/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
     "client":[
       "dev.thestaticvoid.capejs.fabric.CapeJSFabric"
@@ -23,6 +29,7 @@
   ],
   "depends": {
     "fabricloader": ">=0.14.22",
-    "minecraft": ">=1.19.2"
+    "minecraft": ">=1.19.2",
+    "kubejs": ">=1902.6.1-build.300"
   }
 }

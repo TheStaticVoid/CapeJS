@@ -1,15 +1,18 @@
 modLoader="javafml"
 loaderVersion="[43,)"
 license="MIT"
-issueTrackerURL="https://Cody/CapeJSArchitecturyPort/issues"
+issueTrackerURL="https://github.com/TheStaticVoid/CapeJS/issues"
 
 [[mods]]
 modId="capejs"
 version="${version}"
 displayName="CapeJS"
+authors = "static"
 logoFile="icon.png"
 description='''
+Mod utilizing KubeJS to add custom capes to players using scripts
 '''
+license = "MIT"
 
 [[dependencies.capejs]]
 modId="forge"
