@@ -2,7 +2,6 @@ package dev.thestaticvoid.capejs.mixin.client;
 
 import com.mojang.authlib.GameProfile;
 import dev.latvian.mods.kubejs.core.ClientPlayerKJS;
-import dev.thestaticvoid.capejs.CapeJS;
 import dev.thestaticvoid.capejs.CapeRegistry;
 import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.player.AbstractClientPlayer;
@@ -13,7 +12,6 @@ import net.minecraft.world.entity.player.ProfilePublicKey;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -30,7 +28,6 @@ public abstract class AbstractClientPlayerFabricMixin
 
     @Inject(method = "getCloakTextureLocation", at = @At("RETURN"), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
     private void getCloakTextureLocationMixin(CallbackInfoReturnable<ResourceLocation> cir, PlayerInfo playerInfo) {
-        CapeJS.LOGGER.info("In mixin getCloakTextureLocationMixin");
         if (playerInfo != null && CapeRegistry.mapContainsPlayer((AbstractClientPlayer) (Object)this)) {
             cir.setReturnValue(CapeRegistry.getResourceByPlayer((AbstractClientPlayer) (Object)this));
         }
