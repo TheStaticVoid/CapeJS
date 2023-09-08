@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[43,)"
+loaderVersion="[47,)"
 license="MIT"
 issueTrackerURL="https://github.com/TheStaticVoid/CapeJS/issues"
 
@@ -17,18 +17,18 @@ license = "MIT"
 [[dependencies.capejs]]
 modId="forge"
 mandatory=true
-versionRange="[43,)"
+versionRange="[47,)"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.capejs]]
 modId="minecraft"
 mandatory=true
-versionRange="[1.19.2,1.20)"
+versionRange="[1.20.1,)"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.capejs]]
 modId = "kubejs"
 mandatory = true
-versionRange = "[1902.6.1-build.300,)"
+versionRange = "[2001.6.3-build.34,)"

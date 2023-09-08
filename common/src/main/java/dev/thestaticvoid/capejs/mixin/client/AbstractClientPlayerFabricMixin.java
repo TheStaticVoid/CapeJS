@@ -22,8 +22,8 @@ public abstract class AbstractClientPlayerFabricMixin
         extends Player
         implements ClientPlayerKJS {
 
-    public AbstractClientPlayerFabricMixin(Level level, BlockPos blockPos, float f, GameProfile gameProfile, @Nullable ProfilePublicKey profilePublicKey) {
-        super(level, blockPos, f, gameProfile, profilePublicKey);
+    public AbstractClientPlayerFabricMixin(Level level, BlockPos blockPos, float f, GameProfile gameProfile) {
+        super(level, blockPos, f, gameProfile);
     }
 
     @Inject(method = "getCloakTextureLocation", at = @At("RETURN"), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
