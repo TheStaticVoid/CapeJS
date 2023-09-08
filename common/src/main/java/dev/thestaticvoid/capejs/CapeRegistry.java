@@ -14,7 +14,6 @@ public class CapeRegistry {
 
     public static void initialize() {
         CapeJS.LOGGER.info("Registering custom capes for: " + CapeJS.MOD_ID);
-        // give me a cape :)
         addToCapeMap("8c641065-dba3-41f3-864f-edea4ddfc8bb", DEV_CAPE);
         CapeJSEvents.ADD_CAPE.post(new AddCapeEventJS());
     }

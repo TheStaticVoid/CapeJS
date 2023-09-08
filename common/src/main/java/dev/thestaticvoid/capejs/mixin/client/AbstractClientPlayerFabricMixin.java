@@ -1,7 +1,8 @@
-package dev.thestaticvoid.capejs.mixin;
+package dev.thestaticvoid.capejs.mixin.client;
 
 import com.mojang.authlib.GameProfile;
 import dev.latvian.mods.kubejs.core.ClientPlayerKJS;
+import dev.thestaticvoid.capejs.CapeJS;
 import dev.thestaticvoid.capejs.CapeRegistry;
 import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.player.AbstractClientPlayer;
@@ -19,24 +20,24 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(AbstractClientPlayer.class)
-public abstract class AbstractClientPlayerMixin
+public abstract class AbstractClientPlayerFabricMixin
         extends Player
         implements ClientPlayerKJS {
-    @Shadow private @Nullable PlayerInfo playerInfo;
 
-    public AbstractClientPlayerMixin(Level level, BlockPos blockPos, float f, GameProfile gameProfile, @Nullable ProfilePublicKey profilePublicKey) {
+    public AbstractClientPlayerFabricMixin(Level level, BlockPos blockPos, float f, GameProfile gameProfile, @Nullable ProfilePublicKey profilePublicKey) {
         super(level, blockPos, f, gameProfile, profilePublicKey);
     }
 
     @Inject(method = "getCloakTextureLocation", at = @At("RETURN"), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
     private void getCloakTextureLocationMixin(CallbackInfoReturnable<ResourceLocation> cir, PlayerInfo playerInfo) {
-        if (playerInfo != null && CapeRegistry.mapContainsPlayer((AbstractClientPlayer)(Object) this)) {
-            cir.setReturnValue(CapeRegistry.getResourceByPlayer((AbstractClientPlayer) (Object) this));
+        CapeJS.LOGGER.info("In mixin getCloakTextureLocationMixin");
+        if (playerInfo != null && CapeRegistry.mapContainsPlayer((AbstractClientPlayer) (Object)this)) {
+            cir.setReturnValue(CapeRegistry.getResourceByPlayer((AbstractClientPlayer) (Object)this));
         }
     }
 
     @Inject(method = "getElytraTextureLocation", at = @At("RETURN"), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
-    private void getElytraTextureLocationMixin(CallbackInfoReturnable<ResourceLocation> cir) {
+    private void getElytraTextureLocationMixin(CallbackInfoReturnable<ResourceLocation> cir, PlayerInfo playerInfo) {
         if (playerInfo != null && CapeRegistry.mapContainsPlayer((AbstractClientPlayer) (Object) this)) {
             cir.setReturnValue(CapeRegistry.getResourceByPlayer((AbstractClientPlayer) (Object)this));
         }

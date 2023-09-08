@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="MIT"
+issueTrackerURL="https://Cody/CapeJSArchitecturyPort/issues"
+
+[[mods]]
+modId="capejs"
+version="${version}"
+displayName="CapeJS"
+logoFile="icon.png"
+description='''
+'''
+
+[[dependencies.capejs]]
+modId="forge"
+mandatory=true
+versionRange="[43,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.capejs]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.19.2,1.20)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.capejs]]
+modId = "kubejs"
+mandatory = true
+versionRange = "[1902.6.1-build.300,)"

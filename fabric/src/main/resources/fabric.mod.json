@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "capejs",
+  "version": "${version}",
+
+  "name": "CapeJS",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client":[
+      "dev.thestaticvoid.capejs.fabric.CapeJSFabric"
+    ]
+  },
+  "mixins": [
+    "capejs.mixins.json",
+    "capejs-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.22",
+    "minecraft": ">=1.19.2"
+  }
+}
