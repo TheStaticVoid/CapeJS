@@ -113,7 +113,9 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
-    implementation("dev.latvian.mods:kubejs-neoforge:${project.kubejs_version}")
+    // *should* be implementation but doing so just breaks a bunch of shit for some reason
+    // looking at MI's build file, it's the same story. Hopefully KubeJS can fix the issue in the future.
+    compileOnly("dev.latvian.mods:kubejs-neoforge:${project.kubejs_version}")
 
     // Example mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
